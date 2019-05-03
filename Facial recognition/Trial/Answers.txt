@@ -1,0 +1,28 @@
+Question 1
+The training accuracy obtained for k = 1 is 100% because
+we calculate the distance from one point from the set of
+training points to the all points from the same set(training points/data).
+The minimum distance will always be 0 because the nearest point
+will always be same point from the training set points.
+
+Testing and training accuracies differ because one is based
+on a set which the classifier has not seen yet and one is
+based on a set of points the classifier was made. In result,
+the training accuracies for k=1,2 will always be 100%. The testing
+accuracies will be lower than the training accuracies. For the training set,
+the classifier will try to classify a point which is already in the training.
+
+We dont get the same behaviour on different data sets because the samples included
+in the data sets differ from one to another. For example, in one data set we might
+have the samples 1,3,4 for training and the rest for the testing and in another
+data set we have 2,5,6. So we will get a different accuracy thus a different
+behaviour.
+
+It is not a good idea to set the k an even value because we might have the first
+k distances equal and half of them from Class1 and the other half from Class2.
+The classifier will then randomly assing the point/object to either of class 1 or
+class 2. The accuracy will differ over different values of k. When k gets bigger
+the classifier will become lousier and might include some points in a wrong class.
+
+The first subject is harder to classify because the average accuracy is always lower
+than the subject 30. (80% vs 100% using k = 1)
